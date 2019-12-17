@@ -27,11 +27,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   list: {
-    marginHorizontal: 15,
     paddingBottom: 15,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between'
+    justifyContent: 'space-around'
   }
 });
 

@@ -1,18 +1,18 @@
 import React from 'react';
 import {
   Image,
-  StyleSheet,
   SafeAreaView,
   View,
   TouchableOpacity,
   Text,
 } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { ScaledSheet } from 'react-native-size-matters';
 import CameraRollExtended from 'react-native-store-photos-album';
 import flashIcon from '../../assets/icons/flash.png';
 import noFlashIcon from '../../assets/icons/no-flash.png';
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -26,17 +26,17 @@ const styles = StyleSheet.create({
   capture: {
     flex: 0,
     backgroundColor: '#fff',
-    height: 80,
-    width: 80,
-    borderRadius: 50,
+    height: '80@ms',
+    width: '80@ms',
+    borderRadius: '50@ms',
     paddingHorizontal: 20,
     alignSelf: 'center',
     margin: 20,
     justifyContent: 'center'
   },
   captureButton: {
-    height: 70,
-    width: 70,
+    height: '70@ms',
+    width: '70@ms',
     backgroundColor: '#fff',
     shadowColor: '#000',
     shadowOffset: {
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
     elevation: 4,
     alignSelf: 'center',
-    borderRadius: 35
+    borderRadius: '35@ms'
   },
   captureContainer: {
     position: 'absolute',
@@ -64,20 +64,20 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   flashButton: {
-    width: 30,
-    height: 30,
+    width: '30@ms',
+    height: '30@ms',
     alignSelf: 'center'
   },
   exitButton: {
     alignSelf: 'center',
     fontFamily: 'Gram-Regular',
-    fontSize: 40
+    fontSize: '40@ms'
   },
   button: {
     backgroundColor: '#fff',
     marginHorizontal: 15,
-    width: 50,
-    height: 50,
+    width: '50@ms',
+    height: '50@ms',
     borderRadius: 50,
     flexDirection: 'row',
     justifyContent: 'center'

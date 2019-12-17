@@ -3,7 +3,6 @@ import {
   Linking,
   Dimensions,
   Image,
-  StyleSheet,
   Text,
   View,
   ScrollView,
@@ -11,12 +10,13 @@ import {
   Platform
 } from 'react-native';
 import CameraRoll from '@react-native-community/cameraroll';
+import { ScaledSheet } from 'react-native-size-matters';
 import Header from '../components/Header';
 import ImageModal from '../components/ImageModal';
 
 const { width } = Dimensions.get('window');
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff'
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   noImages: {
     fontFamily: 'Gram-Regular',
-    fontSize: 40,
+    fontSize: '40@ms',
     textAlign: 'center'
   },
   imageContainer: {
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   galleryButton: {
     fontFamily: 'Gram-Regular',
     textTransform: 'uppercase',
-    fontSize: 40,
+    fontSize: '40@ms',
     paddingVertical: 15,
     color: 'black'
   }
