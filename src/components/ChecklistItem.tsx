@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import DoubleClick from 'react-native-double-tap';
 import check from '../../assets/icons/check.png';
 
 type ChecklistItemProps = {
@@ -84,7 +83,7 @@ const ChecklistItem = ({
   markComplete
 }: ChecklistItemProps) => {
   return (
-    <DoubleClick singleTap={openModal} doubleTap={() => markComplete(id, !completed)}>
+    <TouchableOpacity onPress={openModal} onLongPress={() => markComplete(id, !completed)}>
       <View style={[styles.container, styles.shadow]}>
         {completed ? (
           <View style={[styles.checkedContainer, styles.image]}>
@@ -100,7 +99,7 @@ const ChecklistItem = ({
         />
         <Text style={styles.name}>{name}</Text>
       </View>
-    </DoubleClick>
+    </TouchableOpacity>
   );
 };
 
