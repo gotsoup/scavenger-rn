@@ -1,5 +1,6 @@
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, Text, View } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
 import TabButton from './TabButton';
 import { standardMargin } from '../styles/global';
 import checklist from '../../assets/icons/checklist.png';
@@ -18,7 +19,7 @@ const buttons = [
   { image: camera, screen: 'Camera' }
 ];
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     height: height * 0.15,
     backgroundColor: '#fff',
@@ -41,13 +42,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Gram-Regular',
-    fontSize: 50,
+    fontSize: '50@ms',
     color: '#000'
   },
   buttonRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '30%'
+    justifyContent: 'flex-end',
+    width: '30%',
   }
 });
 

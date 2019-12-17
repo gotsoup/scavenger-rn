@@ -1,5 +1,6 @@
 import React from 'react';
-import { Dimensions, StyleSheet, View, Text, Image, Modal, TouchableOpacity } from 'react-native';
+import { Dimensions, View, Text, Image, Modal, TouchableOpacity } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
 import closeImage from '../../assets/icons/close-button.png';
 
 type ChecklistItemProps = {
@@ -10,7 +11,7 @@ type ChecklistItemProps = {
 
 const { width, height } = Dimensions.get('window')
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     backgroundColor: '#fff',
     shadowColor: '#000',
@@ -36,23 +37,23 @@ const styles = StyleSheet.create({
     fontFamily: 'Gram-Regular',
     textTransform: 'uppercase',
     textAlign: 'center',
-    fontSize: 40,
+    fontSize: '40@s',
     color: '#000'
   },
   latinName: {
     fontFamily: 'Gram-Regular',
-    fontSize: 35,
+    fontSize: '35@ms',
     color: '#0A4D0E',
     textAlign: 'center'
   },
   normalText: {
     fontFamily: 'OpenSans-Regular',
-    fontSize: 15,
+    fontSize: '15@ms',
     color: '#000'
   },
   hintTitle: {
     fontFamily: 'Gram-Regular',
-    fontSize: 25,
+    fontSize: '25@ms',
     textTransform: 'uppercase',
     color: '#000',
     marginTop: 15
@@ -63,14 +64,14 @@ const styles = StyleSheet.create({
     marginVertical: 15
   },
   closeButton: {
-    height: 65,
-    width: 65,
+    height: '65@ms',
+    width: '65@ms',
     marginTop: 20,
   },
   closeText: {
     fontFamily: 'OpenSans-Regular',
     color: '#000',
-    fontSize: 60,
+    fontSize: '60@ms',
     backgroundColor: 'red'
   }
 })

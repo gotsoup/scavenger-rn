@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   Dimensions,
-  StyleSheet,
   View,
   Text,
   Image,
   Modal,
   TouchableOpacity
 } from 'react-native';
+import { ScaledSheet} from 'react-native-size-matters';
 import closeImage from '../../assets/icons/close-button.png';
 
 const { height, width } = Dimensions.get('window');
@@ -17,7 +17,7 @@ interface IProps {
   close: () => void;
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   modal: {
     flex: 1,
     backgroundColor: 'rgba(0, 0, 0, 0.36)',
@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     width: '75%'
   },
   closeButton: {
-    height: 65,
-    width: 65,
+    height: '65@ms',
+    width: '65@ms',
     marginTop: 20, 
   },
   image: {

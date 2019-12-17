@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   Dimensions,
-  StyleSheet,
   Image,
   Text,
   TouchableOpacity,
   View
 } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
 import check from '../../assets/icons/check.png';
 
 type ChecklistItemProps = {
@@ -20,7 +20,7 @@ type ChecklistItemProps = {
 
 const { width } = Dimensions.get('window');
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     backgroundColor: '#fff',
     flexDirection: 'column',
@@ -50,19 +50,19 @@ const styles = StyleSheet.create({
   },
   checkCircle: {
     backgroundColor: 'white',
-    borderRadius: 25,
-    height: 40,
-    width: 40,
+    borderRadius: '25@ms',
+    height: '40@ms',
+    width: '40@ms',
     justifyContent: 'center',
     alignItems: 'center'
   },
   check: {
-    height: 20,
-    width: 20
+    height: '20@ms',
+    width: '20@ms'
   },
   name: {
     fontFamily: 'Gram-Regular',
-    fontSize: 21,
+    fontSize: '21@ms',
     textAlign: 'center',
     textTransform: 'uppercase',
     color: 'black'
