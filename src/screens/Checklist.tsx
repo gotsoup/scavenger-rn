@@ -169,16 +169,19 @@ class Checklist extends React.PureComponent<IProps, IState> {
     toggleComplete(id, completed);
   };
 
+  getPlants = () => {
+    const { items } = this.props;
+    return Object.keys(items).map(i => items[i]).sort((a,b) => (a.name > b.name) ? 1 : -1);
+  }
+
   render() {
     const { fontLoaded, modalVisible, selectedItem } = this.state;
-    const { items } = this.props;
-    const plants : IItem[] = Object.keys(items).map(i => items[i]);
     return (
       <View style={styles.container}>
           <View style={{ flex: 1 }}>
             <Header title="Checklist" openScreen={this.openScreen} />
             <ScrollView contentContainerStyle={styles.list}>
-              {plants.map(({ id, name, images, description, hints, latinName, completed}: IItem, index) => (
+              {this.getPlants().map(({ id, name, images, description, hints, latinName, completed}: IItem, index) => (
                 <ChecklistItem
                   key={index}
                   name={name}
